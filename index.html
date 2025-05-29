@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Factor Albiceleste Wearstore</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- Fuente moderna -->
+</head>
+<body>
+  <header>
+    <h1>Factor Albiceleste</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <input type="text" id="search" placeholder="Buscar productos..." />
+  </header>
+
+  <section class="hero" id="inicio">
+    <h2>Vestí con identidad</h2>
+    <p>Moda urbana con esencia argentina</p>
+    <a href="#catalogo" class="button">Ver colección</a>
+  </section>
+
+  <section id="catalogo" class="catalogo">
+    <h2>Catálogo</h2>
+    <div class="categorias">
+      <div class="categoria activa" onclick="mostrarCategoria('deportes', this)">Deportes</div>
+      <div class="categoria" onclick="mostrarCategoria('cultura', this)">Cultura</div>
+      <div class="categoria" onclick="mostrarCategoria('musica', this)">Artistas Musicales</div>
+      <div class="categoria" onclick="mostrarCategoria('literatura', this)">Literatura</div>
+      <div class="categoria" onclick="mostrarCategoria('internacional', this)">Internacional</div>
+    </div>
+
+    <div id="deportes" class="subcatalogo" style="display:block;">
+      <h3>Deportes</h3>
+      <div class="productos">
+        <!-- Producto 1 -->
+        <div class="producto">
+          <div class="galeria mejorada">
+            <img src="img/maradonaxmalvinas1.jpg" class="activo" alt="MaradonaxMalvinas 1" onclick="zoomImage(this)" />
+            <img src="img/maradonaxmalvinas2.jpg" alt="MaradonaxMalvinas 2" onclick="zoomImage(this)" />
+            <img src="img/maradonaxmalvinas3.jpg" alt="MaradonaxMalvinas 3" onclick="zoomImage(this)" />
+            <button class="prev" onclick="cambiarImagen(this, -1)">❮</button>
+            <button class="next" onclick="cambiarImagen(this, 1)">❯</button>
+          </div>
+          <h3>Remera Maradona x Malvinas</h3>
+          <p>Edición homenaje al diego y su aguante a las malvinas argentinas.</p>
+          <p><strong>$20000</strong></p>
+          <a href="#" class="button agregar-carrito">Agregar al carrito</a>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto">
+          <div class="galeria mejorada">
+            <img src="img/maradonaxcuba1.jpg" class="activo" alt="MaradonaxCuba 1" onclick="zoomImage(this)" />
+            <img src="img/maradonaxcuba2.jpg" alt="MaradonaxCuba 2" onclick="zoomImage(this)" />
+            <img src="img/maradonaxcuba3.jpg" alt="MaradonaxCuba 3" onclick="zoomImage(this)" />
+            <button class="prev" onclick="cambiarImagen(this, -1)">❮</button>
+            <button class="next" onclick="cambiarImagen(this, 1)">❯</button>
+          </div>
+          <h3>Remera Maradona x Cuba</h3>
+          <p>Diseño homenaje a la relación de Maradona con Cuba y su historia latinoamericana.</p>
+          <p><strong>$21000</strong></p>
+          <a href="#" class="button agregar-carrito">Agregar al carrito</a>
+        </div>
+        <!-- Repite para 8 productos más -->
+      </div>
+    </div>
+
+    <div id="cultura" class="subcatalogo" style="display:none;">
+      <h3>Cultura</h3>
+      <div class="productos">
+        <!-- Producto 1 -->
+        <div class="producto">
+          <div class="galeria mejorada">
+            <img src="img/cultura1.jpg" class="activo" alt="Campera Fileteado" onclick="zoomImage(this)" />
+            <img src="img/cultura2.jpg" alt="Campera Fileteado" onclick="zoomImage(this)" />
+            <img src="img/cultura3.jpg" alt="Campera Fileteado" onclick="zoomImage(this)" />
+            <button class="prev" onclick="cambiarImagen(this, -1)">❮</button>
+            <button class="next" onclick="cambiarImagen(this, 1)">❯</button>
+          </div>
+          <h3>Remera Mate Argentino</h3>
+          <p>Diseño con logo de mate.</p>
+          <p><strong>$13000</strong></p>
+          <a href="#" class="button agregar-carrito">Agregar al carrito</a>
+        </div>
+        <!-- Repite para 9 productos más -->
+      </div>
+    </div>
+
+    <div id="musica" class="subcatalogo" style="display:none;">
+      <h3>Artistas Musicales</h3>
+      <div class="productos">
+        <!-- Producto 1 -->
+        <div class="producto">
+          <div class="galeria mejorada">
+            <img src="img/musica1.jpg" class="activo" alt="Remera Charly García" onclick="zoomImage(this)" />
+            <img src="img/musica2.jpg" alt="Remera Charly García 2" onclick="zoomImage(this)" />
+            <img src="img/musica3.jpg" alt="Remera Charly García 3" onclick="zoomImage(this)" />
+            <button class="prev" onclick="cambiarImagen(this, -1)">❮</button>
+            <button class="next" onclick="cambiarImagen(this, 1)">❯</button>
+          </div>
+          <h3>Remera Charly García animada</h3>
+          <p>Homenaje al maestro del rock argentino con un tono caricaturesco.</p>
+          <p><strong>$18000</strong></p>
+          <a href="#" class="button agregar-carrito">Agregar al carrito</a>
+        </div>
+        <!-- Producto 2: Remera Spinetta -->
+        <div class="producto">
+          <div class="galeria mejorada">
+            <img src="img/spinetta1.jpg" class="activo" alt="Remera Spinetta" onclick="zoomImage(this)" />
+            <img src="img/spinetta2.jpg" alt="Remera Spinetta 2" onclick="zoomImage(this)" />
+            <img src="img/spinetta3.jpg" alt="Remera Spinetta 3" onclick="zoomImage(this)" />
+            <button class="prev" onclick="cambiarImagen(this, -1)">❮</button>
+            <button class="next" onclick="cambiarImagen(this, 1)">❯</button>
+          </div>
+          <h3>Remera Spinetta</h3>
+          <p>Tributo al "Flaco" Spinetta, ícono de la música argentina.</p>
+          <p><strong>$17000</strong></p>
+          <a href="#" class="button agregar-carrito">Agregar al carrito</a>
+        </div>
+        <!-- Repite para 9 productos más -->
+      </div>
+    </div>
+
+    <div id="literatura" class="subcatalogo" style="display:none;">
+      <h3>Literatura</h3>
+      <div class="productos">
+        <!-- Producto 1 -->
+        <div class="producto">
+          <div class="galeria mejorada">
+            <img src="img/literatura1.jpg" class="activo" alt="Remera Mafalda eternauta" onclick="zoomImage(this)" />
+            <img src="img/literatura2.jpg" alt="Remera Mafada eternauta 2" onclick="zoomImage(this)" />
+            <img src="img/literatura3.jpg" alt="Remera Mafada eternauta 3" onclick="zoomImage(this)" />
+            <button class="prev" onclick="cambiarImagen(this, -1)">❮</button>
+            <button class="next" onclick="cambiarImagen(this, 1)">❯</button>
+          </div>
+          <h3>Remera Mafalda Eternauta</h3>
+          <p>Homenaje a dos genios de la historieta argentina, Quirno y Oesterheld.</p>
+          <p><strong>$18000</strong></p>
+          <a href="#" class="button agregar-carrito">Agregar al carrito</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="internacional" class="subcatalogo" style="display:none;">
+      <h3>Internacional</h3>
+      <div class="productos">
+        <!-- Producto 1 -->
+        <div class="producto">
+          <div class="galeria mejorada">
+            <img src="img/internacional1.jpg" class="activo" alt="Remera Ayrton Senna F2" onclick="zoomImage(this)" />
+            <img src="img/internacional2.jpg" alt="Remera Ayrton Senna F2 - vista 2" onclick="zoomImage(this)" />
+            <img src="img/internacional3.jpg" alt="Remera Ayrton Senna F2 - vista 3" onclick="zoomImage(this)" />
+            <button class="prev" onclick="cambiarImagen(this, -1)">❮</button>
+            <button class="next" onclick="cambiarImagen(this, 1)">❯</button>
+          </div>
+          <h3>Remera Leyendas F1</h3>
+          <p>Tributo a los legendarios pilotos del deporte automotor Diseño exclusivo "F1".</p>
+          <p><strong>$22000</strong></p>
+          <a href="#" class="button agregar-carrito">Agregar al carrito</a>
+        </div>
+      </div>
+    </div>
+    <!-- Agregar más subcategorías con productos similares -->
+  </section>
+
+  <section id="nosotros" class="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>Factor Albiceleste nace del deseo de vestir con orgullo una identidad. Inspirada en la pasión argentina por el fútbol, la calle y la cultura popular, nuestra marca busca representar lo que somos: auténticos, potentes, con historia y por sobre todo argentinos.</p>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tenés dudas, consultas? Escribinos acá:</p>
+    <form id="contacto-form">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu email" required />
+      <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+      <button type="submit" class="button">Enviar</button>
+    </form>
+    <div id="mensaje-enviado" style="display:none;">¡Mensaje enviado! Gracias por contactarnos.</div>
+  </section>
+
+  <footer>
+    &copy; 2025 Factor Albiceleste Wearstore. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // Oculta todos los subcatálogos menos el seleccionado y resalta la categoría activa
+    function mostrarCategoria(categoria, elem) {
+      const subcatalogos = document.querySelectorAll('.subcatalogo');
+      subcatalogos.forEach(function(sub) {
+        sub.style.display = 'none';
+      });
+      const seleccionado = document.getElementById(categoria);
+      if (seleccionado) {
+        seleccionado.style.display = 'block';
+      }
+      // Resalta la categoría activa
+      document.querySelectorAll('.categoria').forEach(cat => cat.classList.remove('activa'));
+      if (elem) elem.classList.add('activa');
+    }
+
+    // Cambia la imagen activa en la galería de productos
+    function cambiarImagen(btn, dir) {
+      const galeria = btn.parentElement;
+      const imagenes = Array.from(galeria.querySelectorAll(':scope > img'));
+      if (imagenes.length === 0) return;
+      let actual = imagenes.findIndex(img => img.classList.contains('activo'));
+      if (actual === -1) actual = 0;
+      imagenes[actual].classList.remove('activo');
+      let nuevo = actual + dir;
+      if (nuevo < 0) nuevo = imagenes.length - 1;
+      if (nuevo >= imagenes.length) nuevo = 0;
+      imagenes[nuevo].classList.add('activo');
+    }
+
+    // Zoom de imagen con cierre al hacer click fuera
+    function zoomImage(img) {
+      if (img.classList.contains('zoom')) {
+        img.classList.remove('zoom');
+        document.body.removeEventListener('click', cerrarZoom, true);
+      } else {
+        document.querySelectorAll('.galeria img.zoom').forEach(i => i.classList.remove('zoom'));
+        img.classList.add('zoom');
+        setTimeout(() => {
+          document.body.addEventListener('click', cerrarZoom, true);
+        }, 10);
+      }
+      function cerrarZoom(e) {
+        if (!img.contains(e.target)) {
+          img.classList.remove('zoom');
+          document.body.removeEventListener('click', cerrarZoom, true);
+        }
+      }
+    }
+
+    // Agregar al carrito con feedback visual
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mostrar por defecto el primero
+      mostrarCategoria('deportes', document.querySelector('.categoria'));
+
+      // Agregar interactividad al botón "Agregar al carrito"
+      document.querySelectorAll('.agregar-carrito').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          btn.classList.add('agregado');
+          btn.textContent = '¡Agregado!';
+          setTimeout(() => {
+            btn.classList.remove('agregado');
+            btn.textContent = 'Agregar al carrito';
+          }, 1200);
+        });
+      });
+
+      // Buscador de productos
+      const searchInput = document.getElementById('search');
+      searchInput.addEventListener('input', function() {
+        const query = searchInput.value.toLowerCase();
+        let anyVisible = false;
+        document.querySelectorAll('.subcatalogo').forEach(sub => {
+          let visibleCount = 0;
+          sub.querySelectorAll('.producto').forEach(prod => {
+            const texto = prod.textContent.toLowerCase();
+            if (texto.includes(query)) {
+              prod.style.display = '';
+              prod.classList.add('busqueda-resaltada');
+              visibleCount++;
+              anyVisible = true;
+            } else {
+              prod.style.display = 'none';
+              prod.classList.remove('busqueda-resaltada');
+            }
+          });
+          sub.style.display = visibleCount > 0 ? 'block' : 'none';
+        });
+        // Si la búsqueda está vacía, quitar resaltado y mostrar solo la categoría activa
+        if (!query) {
+          document.querySelectorAll('.producto').forEach(prod => prod.classList.remove('busqueda-resaltada'));
+          document.querySelectorAll('.subcatalogo').forEach(sub => sub.style.display = 'none');
+          const activa = document.querySelector('.categoria.activa');
+          if (activa) mostrarCategoria(activa.textContent.trim().toLowerCase(), activa);
+        }
+      });
+
+      // Envío de formulario de contacto simulado
+      const form = document.getElementById('contacto-form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('mensaje-enviado').style.display = 'block';
+        form.reset();
+        setTimeout(() => {
+          document.getElementById('mensaje-enviado').style.display = 'none';
+        }, 2500);
+      });
+    });
+  </script>
+</body>
+</html>
+

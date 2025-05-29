@@ -1,0 +1,358 @@
+:root {
+  --celeste: #A4D8E1; /* Color celeste representando el cielo argentino */
+  --blanco: #FFFFFF; /* Color blanco para fondo y elementos */
+  --azul: #0072B8; /* Color azul de la bandera argentina */
+  --gris-claro: #F0F0F0; /* Fondo suave para secciones */
+  --gris-oscuro: #343A40; /* Color para texto principal */
+  --verde: #28A745; /* Color verde para botones de éxito */
+  --sombra: 0 4px 24px #0001; /* Sombra suave */
+  --borde: 1px solid #e0e0e0; /* Borde suave */
+  --radio: 12px; /* Radio para bordes redondeados */
+  --trans: 0.2s; /* Tiempo de transición */
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif; /* Fuente moderna */
+  background: var(--gris-claro); /* Fondo claro */
+  margin: 0;
+  color: var(--gris-oscuro); /* Color de texto */
+}
+
+header {
+  background: var(--blanco); /* Fondo blanco para el header */
+  box-shadow: var(--sombra); /* Sombra en el header */
+  padding: 1.2rem 2rem 1rem 2rem; /* Espaciado en el header */
+  position: sticky; /* Fijo en la parte superior */
+  top: 0;
+  z-index: 100; /* Z-index para superposición */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; /* Espaciado entre elementos */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem; /* Tamaño de fuente del título */
+  color: var(--azul); /* Color azul para el título */
+  letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+nav {
+  display: flex;
+  gap: 1.2rem; /* Espaciado entre enlaces de navegación */
+}
+
+nav a {
+  text-decoration: none; /* Sin subrayado */
+  color: var(--gris-oscuro); /* Color de texto de los enlaces */
+  font-weight: 500; /* Peso de fuente */
+  padding: 0.3em 0.7em; /* Espaciado interno */
+  border-radius: var(--radio); /* Bordes redondeados */
+  transition: background var(--trans), color var(--trans); /* Transición suave */
+}
+
+nav a:hover, nav a:focus {
+  background: var(--azul); /* Fondo azul al pasar el mouse */
+  color: var(--blanco); /* Texto blanco al pasar el mouse */
+}
+
+#search {
+  padding: 0.5em 1em; /* Espaciado interno */
+  border-radius: var(--radio); /* Bordes redondeados */
+  border: var(--borde); /* Borde suave */
+  font-size: 1rem; /* Tamaño de fuente */
+  margin-left: 1rem; /* Margen izquierdo */
+  transition: box-shadow var(--trans); /* Transición suave */
+  box-shadow: 0 2px 8px #0072B822; /* Sombra suave */
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--celeste) 60%, var(--blanco) 100%); /* Fondo degradado */
+  text-align: center; /* Centrar texto */
+  padding: 3rem 1rem 2.5rem 1rem; /* Espaciado interno */
+  border-radius: 0 0 var(--radio) var(--radio); /* Bordes redondeados */
+  margin-bottom: 2rem; /* Margen inferior */
+  box-shadow: var(--sombra); /* Sombra en la sección hero */
+}
+
+.hero h2 {
+  font-size: 2.2rem; /* Tamaño de fuente del subtítulo */
+  color: var(--azul); /* Color azul para el subtítulo */
+  margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+.hero p {
+  font-size: 1.2rem; /* Tamaño de fuente del párrafo */
+  color: #444; /* Color del texto */
+  margin-bottom: 1.5rem; /* Margen inferior */
+}
+
+.button {
+  background: var(--azul); /* Fondo azul para botones */
+  color: var(--blanco); /* Texto blanco en botones */
+  border: none; /* Sin borde */
+  border-radius: var(--radio); /* Bordes redondeados */
+  padding: 0.7em 1.5em; /* Espaciado interno */
+  font-size: 1.1rem; /* Tamaño de fuente */
+  font-weight: 600; /* Peso de fuente */
+  cursor: pointer; /* Cursor de puntero */
+  box-shadow: 0 2px 8px #0072B822; /* Sombra suave */
+  transition: background var(--trans), transform var(--trans), box-shadow var(--trans); /* Transición suave */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como bloque en línea */
+}
+
+.button:hover, .button:focus {
+  background: #0056b3; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-2px) scale(1.04); /* Efecto de elevación */
+  box-shadow: 0 6px 24px #0072B833; /* Sombra más intensa */
+}
+
+.catalogo {
+  max-width: 1200px; /* Ancho máximo del catálogo */
+  margin: 0 auto 2rem auto; /* Centrar y margen inferior */
+  padding: 1rem; /* Espaciado interno */
+  background: var(--blanco); /* Fondo blanco */
+  border-radius: var(--radio); /* Bordes redondeados */
+  box-shadow: var(--sombra); /* Sombra en el catálogo */
+}
+
+.categorias {
+  display: flex; /* Mostrar categorías en fila */
+  gap: 1rem; /* Espaciado entre categorías */
+  margin-bottom: 2rem; /* Margen inferior */
+  flex-wrap: wrap; /* Permitir que se envuelvan */
+  justify-content: center; /* Centrar categorías */
+}
+
+.categoria {
+  background: var(--gris-claro); /* Fondo gris claro para categorías */
+  color: var(--gris-oscuro); /* Color de texto */
+  padding: 0.6em 1.2em; /* Espaciado interno */
+  border-radius: var(--radio); /* Bordes redondeados */
+  font-weight: 500; /* Peso de fuente */
+  cursor: pointer; /* Cursor de puntero */
+  border: var(--borde); /* Borde suave */
+  transition: background var(--trans), color var(--trans), box-shadow var(--trans); /* Transición suave */
+  box-shadow: 0 2px 8px #0072B809; /* Sombra suave */
+}
+
+.categoria.activa, .categoria:hover {
+  background: var(--azul); /* Fondo azul para categoría activa */
+  color: var(--blanco); /* Texto blanco para categoría activa */
+  box-shadow: 0 4px 16px #0072B822; /* Sombra más intensa */
+}
+
+.subcatalogo {
+  margin-bottom: 2rem; /* Margen inferior */
+  animation: fadeIn 0.5s; /* Animación de aparición */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+.productos {
+  display: grid; /* Mostrar productos en cuadrícula */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ajustar el tamaño mínimo de las tarjetas */
+  gap: 2rem; /* Espaciado entre productos */
+}
+
+.producto {
+  background: var(--gris-claro); /* Fondo gris claro para productos */
+  border-radius: var(--radio); /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 1.5rem; /* Espaciado interno */
+  display: flex; /* Mostrar como flex */
+  flex-direction: column; /* Colocar elementos en columna */
+  align-items: center; /* Centrar elementos */
+  transition: box-shadow var(--trans), transform var(--trans); /* Transición suave */
+  position: relative; /* Posición relativa */
+  min-width: 0; /* Ancho mínimo */
+}
+
+.producto:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Efecto de hover más atractivo */
+  transform: translateY(-4px); /* Levantar la tarjeta al pasar el mouse */
+}
+
+.producto h3 {
+  margin: 0.5rem 0; /* Margen */
+  font-size: 1.2rem; /* Tamaño de fuente del título */
+  color: var(--azul); /* Color azul para el título */
+  text-align: center; /* Centrar texto */
+}
+
+.producto p {
+  margin: 0.5rem 0; /* Margen */
+  text-align: center; /* Centrar texto */
+  color: #444; /* Color del texto */
+}
+
+.producto strong {
+  color: var(--gris-oscuro); /* Color del precio */
+  font-size: 1.2rem; /* Tamaño de fuente del precio */
+}
+
+.producto .button {
+  margin-top: 1rem; /* Margen superior */
+  width: 100%; /* Ancho completo */
+}
+
+.galeria.mejorada {
+  display: flex; /* Mostrar galería como flex */
+  align-items: center; /* Centrar elementos */
+  position: relative; /* Posición relativa */
+  width: 100%; /* Ancho completo */
+  justify-content: center; /* Centrar contenido */
+  margin-bottom: 1rem; /* Margen inferior */
+  min-height: 180px; /* Altura mínima */
+}
+
+.galeria img {
+  width: 120px; /* Ancho de las imágenes */
+  height: 120px; /* Altura de las imágenes */
+  object-fit: cover; /* Ajustar imagen */
+  border-radius: var(--radio); /* Bordes redondeados */
+  margin: 0 0.2rem; /* Margen entre imágenes */
+  opacity: 0.7; /* Opacidad */
+  border: 2px solid transparent; /* Borde transparente */
+  box-shadow: 0 2px 8px #0072B822; /* Sombra suave */
+  transition: transform var(--trans), box-shadow var(--trans), opacity var(--trans), border var(--trans); /* Transición suave */
+  cursor: pointer; /* Cursor de puntero */
+  background: #fff; /* Fondo blanco */
+  z-index: 1; /* Z-index */
+}
+
+.galeria img.activo {
+  opacity: 1; /* Opacidad completa */
+  border: 2px solid var(--azul); /* Borde azul para imagen activa */
+  box-shadow: 0 4px 16px #0072B822; /* Sombra más intensa */
+  z-index: 2; /* Z-index */
+}
+
+.galeria img.zoom {
+  transform: scale(2.2); /* Escalar imagen al hacer zoom */
+  z-index: 10; /* Z-index alto */
+  box-shadow: 0 0 32px #0008; /* Sombra intensa */
+  position: absolute; /* Posición absoluta */
+  left: 50%; /* Centrar horizontalmente */
+  top: 50%; /* Centrar verticalmente */
+  translate: -50% -50%; /* Ajustar posición */
+  background: #fff; /* Fondo blanco */
+  outline: 4px solid var(--celeste); /* Contorno celeste */
+  cursor: zoom-out; /* Cursor de zoom-out */
+}
+
+.galeria button.prev,
+.galeria button.next {
+  background: #fff; /* Fondo blanco para botones */
+  border: none; /* Sin borde */
+  color: var(--azul); /* Color azul para botones */
+  font-size: 1.5rem; /* Tamaño de fuente */
+  border-radius: 50%; /* Bordes redondeados */
+  width: 2.2em; /* Ancho de botones */
+  height: 2.2em; /* Altura de botones */
+  box-shadow: 0 2px 8px #0072B822; /* Sombra suave */
+  cursor: pointer; /* Cursor de puntero */
+  position: absolute; /* Posición absoluta */
+  top: 50%; /* Centrar verticalmente */
+  transform: translateY(-50%); /* Ajustar posición */
+  opacity: 0; /* Ocultar por defecto */
+  transition: opacity var(--trans), background var(--trans); /* Transición suave */
+  z-index: 3; /* Z-index alto */
+}
+
+.galeria:hover button.prev,
+.galeria:hover button.next {
+  opacity: 1; /* Mostrar al pasar el mouse */
+}
+
+.galeria button.prev { left: -1.2em; } /* Posición del botón anterior */
+.galeria button.next { right: -1.2em; } /* Posición del botón siguiente */
+
+.galeria button:hover {
+  background: var(--azul); /* Fondo azul al pasar el mouse */
+  color: var(--blanco); /* Texto blanco al pasar el mouse */
+}
+
+.busqueda-resaltada {
+  outline: 2px solid var(--azul); /* Contorno azul para búsqueda resaltada */
+  background: var(--celeste); /* Fondo celeste para búsqueda resaltada */
+  animation: resaltar 0.5s; /* Animación de resaltado */
+}
+
+@keyframes resaltar {
+  from { outline-color: #fff; background: #fff; }
+  to { outline-color: var(--azul); background: var(--celeste); }
+}
+
+.nosotros, .contacto {
+  max-width: 900px; /* Ancho máximo */
+  margin: 2rem auto; /* Centrar y margen */
+  background: var(--blanco); /* Fondo blanco */
+  border-radius: var(--radio); /* Bordes redondeados */
+  box-shadow: var(--sombra); /* Sombra en secciones */
+  padding: 2rem 1.5rem; /* Espaciado interno */
+}
+
+.nosotros h2, .contacto h2 {
+  color: var(--azul); /* Color azul para títulos */
+  margin-top: 0; /* Sin margen superior */
+}
+
+.contacto form {
+  display: flex; /* Mostrar formulario como flex */
+  flex-direction: column; /* Colocar elementos en columna */
+  gap: 1rem; /* Espaciado entre elementos */
+  margin-top: 1rem; /* Margen superior */
+}
+
+.contacto input, .contacto textarea {
+  padding: 0.7em 1em; /* Espaciado interno */
+  border-radius: var(--radio); /* Bordes redondeados */
+  border: var(--borde); /* Borde suave */
+  font-size: 1rem; /* Tamaño de fuente */
+  background: var(--gris-claro); /* Fondo gris claro */
+  transition: box-shadow var(--trans), border var(--trans); /* Transición suave */
+}
+
+.contacto input:focus, .contacto textarea:focus {
+  border: 1.5px solid var(--azul); /* Borde azul al enfocar */
+  box-shadow: 0 2px 8px #0072B822; /* Sombra suave al enfocar */
+  outline: none; /* Sin contorno */
+}
+
+.contacto button[type="submit"] {
+  width: 180px; /* Ancho del botón de envío */
+  align-self: flex-end; /* Alinear a la derecha */
+}
+
+#mensaje-enviado {
+  color: var(--verde); /* Color verde para mensaje enviado */
+  font-weight: 600; /* Peso de fuente */
+  margin-top: 1rem; /* Margen superior */
+  font-size: 1.1rem; /* Tamaño de fuente */
+}
+
+footer {
+  background: var(--azul); /* Fondo azul para el footer */
+  color: var(--blanco); /* Texto blanco en el footer */
+  text-align: center; /* Centrar texto */
+  padding: 1.2rem 0; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  border-radius: var(--radio) var(--radio) 0 0; /* Bordes redondeados */
+  margin-top: 2rem; /* Margen superior */
+  box-shadow: 0 -2px 12px #0072B822; /* Sombra suave */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+@media (max-width: 700px) {
+  .productos { grid-template-columns: 1fr; } /* Ajustar a una columna en móviles */
+  header { flex-direction: column; gap: 1rem; } /* Cambiar dirección en móviles */
+  nav { justify-content: center; } /* Centrar navegación en móviles */
+  .categorias { flex-direction: column; gap: 0.7rem; } /* Cambiar dirección en móviles */
+  .hero { padding: 2rem 0.5rem 1.5rem 0.5rem; } /* Ajustar espaciado en móviles */
+}
